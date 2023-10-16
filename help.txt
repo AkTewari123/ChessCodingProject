@@ -1,1 +1,2 @@
 Documentation: https://tailwindcss.com/docs/text-color
+Make this more dynamic
