@@ -32,6 +32,14 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'chess': "url('/src/chess.webp')",
       },
+      fontFamily: {
+        'nunito': ['nunito', 'sans-serif'],
+        'MyFont': ['"My Font"', 'serif'], // Ensure fonts with spaces have " " surrounding it.
+        'lato':['lato', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif']
+
+      },
+      
       
     },
   },
