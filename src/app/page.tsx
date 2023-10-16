@@ -10,16 +10,22 @@ export default function Home() {
         <Link href = "/membership" className = "text-white ml-[5%] md:ml-[2%] font-sans hover:text-slate-400 transition-all duration-[500ms] md:text-center">Membership</Link>
         <Link href = "/tournaments" className = "text-white ml-[5%] md:ml-[2%] font-sans hover:text-slate-400 transition-all duration-[500ms] md:text-center">Classes & Tournaments</Link>
       </header>
-    <div  className = "mt-0 relative bg-cover bg-center h-screen bg-[url('https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpVmOHiw.png')]" >
+    <div  className = "mt-0 relative bg-cover bg-center h-[30%] py-[5%] bg-[url('https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpVmOHiw.png')]" >
  <div className = "px-10">
     <h1 className = " align-middle text-[500%] text-white  font-sans text-center items-center justify-center">Welcome to the Marlboro Chess Club! <p className = " text-[35%]"> by Akshat Tewari and Rakesh Chandwani</p></h1>
     </div>
-    <div className = "flex flex-row p-0 align-middle relative object-left-top">
-      <article className = "text-[200%] ml-[5%] relative mb-[10%] center text-white border-4 border-indigo-500/75 rounded outline-none p-3 px-5">Sign up for Classes Today!</article>
-    
- </div>
     </div>
+    <div className = "h-100 bg-black bg-cover">
+    <div className="flex flex-row">
+  <div className="rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 w-[20%] overflow-auto">
+    <div className="flex bg-black overflow-scroll">
+      <article className="text-[150%] font-sans text-white p-2 block align-center text-center">Sign up Right Now!<p className = "align-center text-center justify-center">fdl;ahglasdkgljf;lawhgk;dsjgkl;adshg;dsakl;gha;slfdska;lfhas;lk;a</p></article>
+    </div>
+  </div>
+</div>
+</div>
     </body>
+    
 </>
   )
 }
