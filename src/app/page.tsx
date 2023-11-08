@@ -11,17 +11,17 @@ export default function Home() {
     <body className = "relative">
 
     <header className = "flex flex-row md:flex-col mt-0 bg-whitep-4 text-white text-[150%] ">
-        <Link href = "/" className = "text-black ml-[2%] font-nunito hover:text-slate-400 transition-all duration-[500ms] md:text-center p-3 underline"><b>About Us </b></Link>
-        <Link href = "/membership" className = "text-black ml-[5%] md:ml-[2%] font-nunito hover:text-slate-400 transition-all duration-[500ms] p-3 md:text-center">Membership</Link>
-        <Link href = "/tournaments" className = "text-black ml-[5%] md:ml-[2%] font-nunito hover:text-slate-400 transition-all duration-[500ms] p-3 md:text-center">Classes & Tournaments</Link>
+        <Link href = "/" className = "text-black ml-[2%] font-nunito hover:text-slate-400 transition-all duration-[500ms] p-3 underline"><b>About Us </b></Link>
+        <Link href = "/membership" className = "text-black ml-[5%] md:ml-[2%] font-nunito hover:text-slate-400 transition-all duration-[500ms] p-3 ">Membership</Link>
+        <Link href = "/tournaments" className = "text-black ml-[5%] md:ml-[2%] font-nunito hover:text-slate-400 transition-all duration-[500ms] p-3 ">Classes & Tournaments</Link>
       </header>
     <div  className = "mt-0 relative bg-cover bg-center h-[30%] py-[5%] bg-[url('https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpVmOHiw.png')]" >
  <div className = "px-10">
     <h1 className = " align-middle text-[450%] text-white  font-nunito text-center items-center justify-center"><b>Welcome to the Marlboro Chess Club! </b><p className = " text-[35%]"> by Akshat Tewari and Rakesh Chandwani</p></h1>
     </div>
     </div>
-    <div className = "w-full align-center text-center justify-center text-[300%] text-white font-nunito bg-black"><strong>About Us</strong></div>
-    <div className = "h-screen bg-black bg-cover">
+    <div className = "w-full align-center text-center justify-center text-[300%] text-white md:text-black md:bg-gradient-to-r from-blue-100 to-blue-400 font-nunito bg-black "><strong>About Us</strong></div>
+    <div className = "h-screen bg-black bg-cover md:flex-column">
     <div className="flex flex-row">
   <div className="rounded-md bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 p-1 w-[25%] overflow-auto mt-[10%] ml-[3%] h-fit">
     <div className="flex bg-black overflow-auto text-center h-full">
@@ -32,7 +32,7 @@ export default function Home() {
       puzzles, game analysis, and endgame lessons, anyone rated 500 to 1200 can learn something!</p></article>
     </div>
   </div>
-  <div className="hidden rounded-md bg-gradient-to-r from-red-500 via-pink-500 to-indigo-500 p-1 w-[25%] overflow-auto mt-[10%] ml-[10%] h-fit">
+  <div className=" rounded-md bg-gradient-to-r from-red-500 via-pink-500 to-indigo-500 p-1 w-[25%] overflow-auto mt-[10%] ml-[10%] h-fit">
     <div className="flex bg-black overflow-auto text-center h-full">
       <article className="text-[175%] font-nunito bg-gradient-to-r from-red-500 via-pink-500 to-indigo-500 inline-block text-transparent bg-clip-text p-[5%] block w-[100%] overflow-auto">
         <strong>Our Story</strong><p className = "align-center text-center justify-center text-[75%] text-white mt-[3%]">
