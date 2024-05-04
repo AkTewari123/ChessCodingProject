@@ -26,6 +26,12 @@ const config: Config = {
         'sm': {'max': '639px'},
         // => @media (max-width: 639px) { ... }
       },
+      colors: {
+        'darkvi': '#0c0043',
+        'darkpurp': '#960058',
+        'lightorange': '#f38716',
+        'yell': '#fff87f'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
