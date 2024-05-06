@@ -30,7 +30,8 @@ const config: Config = {
         'darkvi': '#0c0043',
         'darkpurp': '#960058',
         'lightorange': '#f38716',
-        'yell': '#fff87f'
+        'yell': '#fff87f',
+        'blackGood': '#171717'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
