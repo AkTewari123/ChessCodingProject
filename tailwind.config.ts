@@ -31,7 +31,8 @@ const config: Config = {
         'darkpurp': '#960058',
         'lightorange': '#f38716',
         'yell': '#fff87f',
-        'blackGood': '#171717'
+        'blackGood': '#171717',
+        'textGray': '#AAAAAA',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
