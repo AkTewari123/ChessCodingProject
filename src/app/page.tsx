@@ -118,9 +118,9 @@ export default function Home() {
                 className="ml-[1%] inline w-[5%] underline underline-offset-[20px] decoration-8 decoration-wavy decoration-lightorange"
               />
             </article>
-            <div className="text-[100%] rounded-md bg-gradient-to-r from-purple-500 to-lightorange p-1 w-[50%] overflow-auto mt-[10%] ml-[35%] h-fit">
+            <div className="text-[90%] rounded-md bg-gradient-to-r from-purple-500 to-lightorange p-1 w-[50%] overflow-auto mt-[10%] ml-[35%] h-fit">
               <div className="flex bg-blackGood  overflow-auto text-left h-full">
-                <article className="text-[40%] font-nunito bg-gradient-to-r from-purple-500 to-lightorange inline-block bg-clip-text p-[5%] block w-[100%] overflow-auto">
+                <article className="text-[35%] font-nunito bg-gradient-to-r from-purple-500 to-lightorange inline-block bg-clip-text p-[5%] block w-[100%] overflow-auto">
                   <p className="align-center justify-center text-[110%] text-white mt-[3%]">
                     Marlboro Chess Club
                   </p>
