@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import * as React from "react";
+import Navbar from "./components";
 import {
   useState,
   useEffect,
@@ -9,6 +10,7 @@ import {
   UIEvent,
 } from "react";
 console.log("console works");
+
 export default function Home() {
   const [x, setX] = useState(0);
   const [y, setY] = useState("");
@@ -36,21 +38,15 @@ export default function Home() {
   var chessBoardHeight = 50;
   var chessBoardWidth = chessBoardHeight / 2;
   const purpleBoard = `z-20 align-middle absolute w-[25%] mt-[-3%]`;
-  const chessBoardTopImage = `z-20 text-white rounded-[50px] border-[3px] absolute rotate-[345deg] mt-[15%] mr-[65%] h-[${chessBoardHeight}%] w-[${chessBoardWidth}%] object-fill flex-auto`;
-  const aboutUsHeader =
-    "z-20 text-white text-[150%] w-[140px] font-nunito p-[15px] underline decoration-4 underline-offset-8 border-white";
-  const otherHeaders =
-    "z-20 text-white text-[150%] font-nunito  ml-[4%] p-[15px] underline decoration-2 underline-offset-8 border-white ";
+  const chessBoardTopImage = `z-20 text-white rounded-[50px] border-[3px] absolute mt-[15%] mr-[65%] h-[${chessBoardHeight}%] w-[${chessBoardWidth}%] object-fill flex-auto`;
   const backgroundTop = `z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80%  to-yell h-[500px] flex flex-wrap h-screen`;
   const miniText = `z-20 text-white text-[16px]`;
-  const headImage = `z-20 absolute h-[100%] float-left mr-[90%] `;
   const greeting = `z-20 text-white text-[300%] w-[40%] text-center mt-[6%] font-bold`;
   const bodyC = `font-nunito text-white bg-blackGood`;
   const storyHeader = `underline underline-offset-[20px] decoration-8 decoration-wavy decoration-lightorange`;
   const ourStory =
     "w-[35%] align-center bg-black bg-opacity-70 mt-[30%] text-[250%] p-[2%] absolute rounded-[30px] text-center text-white font-semibold";
   const arrow = `animate-bounce relative clear-both h-[50px] ml-[5%] inline`;
-  const header = `${y} text-center h-[8%] fixed z-30 place-content-center font-semibold justify-center p-[1] flex flex-row  w-[100%]`;
   const list = `text-[80%] inline`;
   const checkMarkOrange = `h-[40px] inline mb-[.5%] mr-[1%]`;
   const items = "inline";
@@ -63,24 +59,7 @@ export default function Home() {
       />
       <body className={bodyC}>
         <div className={backgroundTop}>
-          <header className={header}>
-            <img
-              className={headImage}
-              src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/NOooooooYuo/phpr9TG5y.png"
-              alt="Image Not Loading"
-            />
-            <Link href="/" className={aboutUsHeader}>
-              About Us
-            </Link>
-
-            <Link href="/tournaments" className={otherHeaders}>
-              Tournaments
-            </Link>
-
-            <Link href="/membership" className={otherHeaders}>
-              Classes
-            </Link>
-          </header>
+          <Navbar color={"text-white"}/>
           <img
             className={chessBoardTopImage}
             src="https://i0.wp.com/jkcreativewood.com/wp-content/uploads/2016/12/XL-CHESS-SET-DETAIL-scaled.jpg?fit=2560%2C2560&ssl=1"
@@ -157,7 +136,7 @@ export default function Home() {
                       className={checkMarkOrange}
                     />
                     <li className={items}>
-                      A likeminded and competitive community
+                      A like minded and competitive community
                     </li>
                   </ol>
                 </article>
