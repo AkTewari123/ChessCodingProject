@@ -33,6 +33,7 @@ const config: Config = {
         'yell': '#fff87f',
         'blackGood': '#171717',
         'textGray': '#AAAAAA',
+        'blueNice': '#007FFF'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
