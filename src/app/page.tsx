@@ -64,85 +64,49 @@ export default function Home() {
 
   const uscfLink = `text-blueNice !important`;
   const textAbout = "text-textGray text-[60%] font-light";
-  const [popDisplay, displayS] = useState(`opacity-100 brightness-200 fixed text-white bg-blackGood fixed mt-[20%] block p-[20px] rounded-[5px] border-white border-[5px] z-50`);
+  const [popDisplay, displayS] = useState(
+    `opacity-100 fixed text-[200%] text-white bg-blackGood fixed mt-[20%] block p-[20px] ml-[26%] mr-[26%] rounded-[10px] border-white border-[5px] z-50 text-center `
+  );
 
-  const popUp =`${popDisplay}`;
-  function createPopup() {
-    // Create the popup elements
-    const popup = document.createElement("body");
-    popup.style.position = "fixed";
-    popup.style.top = "50%";
-    popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.padding = "20px";
-    popup.style.backgroundColor = "#171717";
-    popup.style.border = "5px solid white";
-    popup.style.borderRadius = "5px";
-    popup.style.zIndex = "1000";
-    popup.style.color = "white";
-    popup.style.opacity = "100";
-    const message = document.createElement("p");
-    message.innerText = "Don't know where to start?\n";
-    popup.appendChild(message);
-    const link = document.createElement("a");
-    link.href = "https://new.uschess.org/join-us-chess";
-    link.textContent = "Click here to become a member of USCF today!";
-    link.style.color = "#007FFF";
-    link.target = "_blank";
-    popup.appendChild(link);
-    const buffer = document.createElement("p");
-    buffer.innerText = "";
-    popup.appendChild(buffer);
-
-    const closeButton = document.createElement("button");
-    closeButton.innerText = "CLOSE";
-    closeButton.addEventListener("click", () => {
-      popup.style.display = "none";
-      document.body.removeChild(popup);
-      console.log("this is running");
-      setO(100);
-      displayS("hidden");
-    });
-    popup.appendChild(closeButton);
-
-    // Append the popup to the body
-    document.body.appendChild(popup);
-  }
+  const popUp = `${popDisplay}`;
   return (
     <>
       <link
         href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap"
         rel="stylesheet"
       />
+
       <body style={{ backgroundColor: "#171717" }}>
-        <div className={backgroundTop}>
-          <Navbar
+      <Navbar
             borderOne="decoration-4"
             borderTwo="decoration-2"
             borderThree="decoration-2"
           />
-          <div className={popUp}>
-            Don't know where to start?<br></br>
-            <a
-              href="https://new.uschess.org/join-us-chess"
-              target="_blank"
-              className={uscfLink}
-            >
-              Click here to become a member of USCF today!
-            </a>
-            <br></br>
-            <button
-              onClick={ () => {
-                setZ(z+1)
-                setO(100)
-                displayS("hidden")
+        <div className={popUp}>
+          Want a head start on your chess journey?<br></br>
+          <a
+            href="https://new.uschess.org/join-us-chess"
+            target="_blank"
+            className={uscfLink}
+          >
+            Click here to become a member of USCF today!
+          </a>
+          <br></br>
+          <button
+            onClick={() => {
+              setZ(z + 1);
+              setO(100);
+              displayS("hidden")
+            }}
+            className="text-rose-500"
+          >
+            CLOSE
+          </button>
+          {/* <p>{z}</p> */}
+        </div>
+        <div className={backgroundTop}>
 
-              }}
-            >
-              CLOSE
-            </button>
-            {/* <p>{z}</p> */}
-          </div>
+
           <img
             className={chessBoardTopImage}
             src="https://i0.wp.com/jkcreativewood.com/wp-content/uploads/2016/12/XL-CHESS-SET-DETAIL-scaled.jpg?fit=2560%2C2560&ssl=1"
