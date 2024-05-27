@@ -11,7 +11,7 @@ type NavbarPropsType = { borderOne?: string; borderTwo?: string; borderThree?: s
 const Navbar = (props: NavbarPropsType) => {
   const [x, setX] = useState(0);
   const [y, setY] = useState("");
-  const headImage = `z-20 absolute h-[100%] float-left mr-[90%] `;
+  const headImage = `z-20 absolute h-[100%] float-left mr-[90%] phone:hidden`;
   const otherHeaders = `z-20 text-white text-[150%] font-nunito  ml-[4%] p-[15px] underline ${props.borderTwo} underline-offset-8 border-white `;
   const classHeader = `z-20 text-white text-[150%] font-nunito  ml-[4%] p-[15px] underline ${props.borderThree} underline-offset-8 border-white `;
   console.log(otherHeaders);
