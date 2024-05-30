@@ -26,7 +26,7 @@ const config: Config = {
         'phone': {'min':'300px', 'max': '599px'},
         // => @media (max-width: 767px) { ... }
   
-        'sm': {'max': '639px'},
+        'smphone': {'max': '639px'},
         // => @media (max-width: 639px) { ... }
       },
       colors: {
@@ -36,7 +36,8 @@ const config: Config = {
         'yell': '#fff87f',
         'blackGood': '#171717',
         'textGray': '#AAAAAA',
-        'blueNice': '#007FFF'
+        'blueNice': '#007FFF',
+        'darkBlue': '#002244'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

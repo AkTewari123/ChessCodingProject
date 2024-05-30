@@ -31,7 +31,7 @@ export default function Home() {
     `opacity-50 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80% to-yell tablet:h-[600px] phone:h-[400px] smtablet:h-[400px] flex flex-wrap h-screen`
   );
   const [sectionTwo, setTwo] = useState(
-    `z-30 text-[450%] font-bold bg-blackGood h-screen phone:h-[1px] text-white opacity-50`
+    `z-30 text-[450%] font-bold bg-blackGood h-screen phone:h-[1px] tablet:h-[1px] smtablet:h-[1px] text-white opacity-50`
   );
   const [brownB, setBoard] = useState(
     `absolute w-[25%] z-10 mt-[10%] ml-[75%] tablet:mt-[27%] smtablet:mt-[10%] opacity-50 z-40 phone:hidden`
@@ -43,7 +43,7 @@ export default function Home() {
   var chessBoardWidth = chessBoardHeight / 2;
 
   const purpleBoard = `z-20 align-middle absolute w-[25%] mt-[-3%] phone:hidden`;
-  const chessBoardTopImage = `z-20 text-white rounded-[50px] phone:rounded-[30px] phone:h-[120px] phone:w-[120px] border-[3px] absolute mt-[15%] phone:mt-[250px] phone:mr-[0%] mr-[65%] tablet:mr-[70%] tablet:mt-[14%] tablet:h-[200px] tablet:w-[200px] h-[${chessBoardHeight}%] w-[${chessBoardWidth}%] object-fill flex-auto`;
+  const chessBoardTopImage = `z-20 text-white rounded-[50px] phone:rounded-[30px] phone:h-[110px] phone:w-[110px] border-[3px] absolute mt-[15%] phone:mt-[285px] phone:mr-[0%] mr-[65%] tablet:mr-[70%] tablet:mt-[14%] tablet:h-[200px] tablet:w-[200px] h-[${chessBoardHeight}%] w-[${chessBoardWidth}%] object-fill flex-auto`;
 
   const miniText = `z-20 text-white laptop:text-[16px] tablet:text-[40%] smtablet:text-[20%] phone:text-[20%]`;
 
@@ -67,7 +67,7 @@ export default function Home() {
   const uscfLink = `text-blueNice !important`;
   const textAbout = "text-textGray text-[60%] font-light";
   const [popDisplay, displayS] = useState(
-    `opacity-100 fixed laptop:text-[200%] tablet:ml-[30%] tablet:mr-[30%] text-white bg-blackGood phone:ml-[20%] phone:mr-[20%] phone:mt-[50%] phone:w-[60%] fixed mt-[20%] block p-[20px] ml-[26%] mr-[26%] rounded-[10px] border-white border-[5px] z-50 text-center smtablet:mt-[25%]`
+    `opacity-100 fixed laptop:text-[200%] tablet:ml-[30%] tablet:mr-[30%] text-white bg-darkBlue phone:ml-[20%] phone:mr-[20%] phone:mt-[50%] phone:w-[60%] fixed mt-[20%] block p-[20px] ml-[26%] mr-[26%] border-white border-[1px] z-50 text-center smtablet:mt-[25%]`
   );
 
   const popUp = `${popDisplay}`;
@@ -100,16 +100,19 @@ export default function Home() {
           <br></br>
           <button
             onClick={() => {
+              var tran = 2000;
               setZ(z + 1);
               setTwo(
-                `opacity-100 z-30 text-[450%] font-bold bg-blackGood h-screen text-white phone:h-[1px] `
+                `transition duration-[${tran}ms] opacity-100 z-30 text-[450%] font-bold bg-blackGood h-screen text-white phone:h-[1px] tablet:h-[1px] smtablet:h-[1px]`
               );
               setO(
-                `phone:h-[400px] opacity-100 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80%  to-yell flex flex-wrap tablet:h-[600px] smtablet:h-[400px] laptop:h-screen`
+                `phone:h-[400px] transition duration-[${tran}ms] opacity-100 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80%  to-yell flex flex-wrap tablet:h-[600px] smtablet:h-[400px] laptop:h-screen`
               );
-              displayS("hidden");
+              displayS(
+                "fixed laptop:text-[200%] tablet:ml-[30%] tablet:mr-[30%] text-white bg-blackGood phone:ml-[20%] phone:mr-[20%] phone:mt-[50%] phone:w-[60%] fixed mt-[20%] block p-[20px] ml-[26%] mr-[26%] rounded-[10px] border-white border-[5px] z-50 text-center smtablet:mt-[25%] transition-all duration-[${tran}ms] opacity-0 duration-[1000ms] mt-[35%]"
+              );
               setBoard(
-                `absolute w-[25%] phone:hidden tablet:w-[22%]ml-[80%] z-30 laptop:mt-[10%] smtablet:mt-[10%] tablet:mt-[27%] ml-[75%] opacity-100`
+                `absolute w-[25%] phone:hidden tablet:w-[22%]ml-[80%] z-30 laptop:mt-[10%] smtablet:mt-[10%] tablet:mt-[27%] ml-[75%] transition duration-[${tran}ms] opacity-100`
               );
             }}
             className="text-rose-500"

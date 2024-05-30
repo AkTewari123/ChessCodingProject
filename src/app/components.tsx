@@ -7,6 +7,8 @@ import {
   SyntheticEvent,
   UIEvent,
 } from "react";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 type NavbarPropsType = {
   borderOne?: string;
   borderTwo?: string;
@@ -16,10 +18,10 @@ type NavbarPropsType = {
 const Navbar = (props: NavbarPropsType) => {
   const [x, setX] = useState(0);
   const [y, setY] = useState("");
-  const headImage = `z-20 absolute h-[100%] float-left mr-[90%] phone:hidden`;
-  const tournamentHeader = `z-20 text-white text-[120%] phone:text-[100%] font-nunito  ml-[4%] p-[20px] phone:p-[5px] underline ${props.borderTwo} underline-offset-8 border-white `;
-  const classHeader = `z-20 text-white text-[120%] phone:text-[100%] font-nunito  ml-[4%] p-[20px] phone:p-[5px] underline ${props.borderThree} underline-offset-8 border-white `;
-  const aboutUsHeader = `z-20 text-white text-[120%] phone:text-[100%] phone:ml-[4%] font-nunito p-[20px] phone:p-[5px] underline ${props.borderOne} underline-offset-8 border-white`;
+  const headImage = `z-20 absolute h-[100%] float-left mr-[90%] smphone:hidden phone:hidden`;
+  const tournamentHeader = `z-20 text-white text-[120%] phone:text-[100%] smphone:text-[100%] font-nunito  ml-[4%] p-[20px] phone:p-[5px] smphone:p-[5px] underline ${props.borderTwo} underline-offset-8 border-white `;
+  const classHeader = `z-20 text-white text-[120%] phone:text-[100%] smphone:text-[100%] font-nunito  ml-[4%] p-[20px] phone:p-[5px] smphone:p-[5px] underline ${props.borderThree} underline-offset-8 border-white `;
+  const aboutUsHeader = `z-20 text-white text-[120%] phone:text-[100%] smphone:text-[100%] phone:ml-[4%] smphone:ml-[4%] font-nunito p-[20px] phone:p-[5px] smphone:p-[5px] underline ${props.borderOne} underline-offset-8 border-white`;
   useEffect(() => {
     const handleScroll = (e: Event) => {
       console.log("This is working");
@@ -37,7 +39,7 @@ const Navbar = (props: NavbarPropsType) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const header = `${y} text-center fixed z-30 place-content-center font-semibold justify-center flex flex-row phone:flex-col w-[100%] h-[60px] phone:h-[100px]`;
+  const header = `${y} text-center fixed z-30 place-content-center font-semibold justify-center flex flex-row phone:flex-col smphone:flex-col w-[100%] h-[60px] phone:h-[100px] smphone:h-[100px]`;
   return (
     <header className={header}>
       <img
@@ -61,40 +63,10 @@ const Navbar = (props: NavbarPropsType) => {
 };
 export default Navbar;
 
-export function createPopup() {
-  // Create the popup elements
-  const popup = document.createElement("body");
-  popup.style.position = "fixed";
-  popup.style.top = "50%";
-  popup.style.left = "50%";
-  popup.style.transform = "translate(-50%, -50%)";
-  popup.style.padding = "20px";
-  popup.style.backgroundColor = "#171717";
-  popup.style.border = "5px solid white";
-  popup.style.borderRadius = "5px";
-  popup.style.zIndex = "1000";
-  popup.style.color = "white";
 
-  const message = document.createElement("p");
-  message.innerText = "Don't know where to start?\n";
-  popup.appendChild(message);
-  const link = document.createElement("a");
-  link.href = "https://new.uschess.org/join-us-chess";
-  link.textContent = "Click here to become a member of USCF today!";
-  link.style.color = "#007FFF";
-  link.target = "_blank";
-  popup.appendChild(link);
-  const buffer = document.createElement("p");
-  buffer.innerText = "";
-  popup.appendChild(buffer);
 
-  const closeButton = document.createElement("button");
-  closeButton.innerText = "CLOSE";
-  closeButton.addEventListener("click", () => {
-    document.body.removeChild(popup);
-  });
-  popup.appendChild(closeButton);
-
-  // Append the popup to the body
-  document.body.appendChild(popup);
-}
+export const New = () => (
+  <Popup trigger= {<button> Trigger</button>} position="right center">
+    <div>Popup content here !!</div>
+  </Popup>
+);
