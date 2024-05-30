@@ -17,10 +17,13 @@ const config: Config = {
         'laptop': {'min': '1000px'},
         // => @media (max-width: 1279px) { ... }
   
-        'tablet': {'min': '640px', 'max': '999px'},
+        'tablet': {'min': '800px', 'max': '999px'},
+        // => @media (max-width: 1023px) { ... }
+
+        'smtablet': {'min': '600px', 'max': '799px'},
         // => @media (max-width: 1023px) { ... }
   
-        'phone': {'max': '639px'},
+        'phone': {'min':'300px', 'max': '599px'},
         // => @media (max-width: 767px) { ... }
   
         'sm': {'max': '639px'},

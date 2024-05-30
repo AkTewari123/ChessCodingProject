@@ -28,37 +28,35 @@ export default function Home() {
   }, []);
 
   const [setTop, setO] = useState(
-    `opacity-50 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80%  to-yell h-[500px] flex flex-wrap h-screen`
+    `opacity-50 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80% to-yell tablet:h-[600px] phone:h-[400px] smtablet:h-[400px] flex flex-wrap h-screen`
   );
   const [sectionTwo, setTwo] = useState(
-    `z-30 text-[450%] font-bold bg-blackGood h-screen text-white opacity-50`
+    `z-30 text-[450%] font-bold bg-blackGood h-screen phone:h-[1px] text-white opacity-50`
   );
   const [brownB, setBoard] = useState(
-    `absolute w-[25%] z-10 mt-[10%] ml-[75%] opacity-50 z-40`
+    `absolute w-[25%] z-10 mt-[10%] ml-[75%] tablet:mt-[27%] smtablet:mt-[10%] opacity-50 z-40 phone:hidden`
   );
-
 
   var chessBoardHeight = 50;
   var [z, setZ] = useState(0);
 
   var chessBoardWidth = chessBoardHeight / 2;
 
-  const purpleBoard = `z-20 align-middle absolute w-[25%] mt-[-3%]`;
+  const purpleBoard = `z-20 align-middle absolute w-[25%] mt-[-3%] phone:hidden`;
+  const chessBoardTopImage = `z-20 text-white rounded-[50px] phone:rounded-[30px] phone:h-[120px] phone:w-[120px] border-[3px] absolute mt-[15%] phone:mt-[250px] phone:mr-[0%] mr-[65%] tablet:mr-[70%] tablet:mt-[14%] tablet:h-[200px] tablet:w-[200px] h-[${chessBoardHeight}%] w-[${chessBoardWidth}%] object-fill flex-auto`;
 
-  const chessBoardTopImage = `z-20 text-white rounded-[50px] border-[3px] absolute mt-[15%] mr-[65%] h-[${chessBoardHeight}%] w-[${chessBoardWidth}%] object-fill flex-auto`;
+  const miniText = `z-20 text-white laptop:text-[16px] tablet:text-[40%] smtablet:text-[20%] phone:text-[20%]`;
 
-  const miniText = `z-20 text-white laptop:text-[16px] tablet:text-[40%]`;
-
-  const greeting = `z-20 text-white text-[300%] tablet:text-[175%] w-[40%] tablet:mt-[9%] text-center mt-[6%] font-bold`;
+  const greeting = `z-20 text-white text-[300%] phone:mt-[125px] phone:text-[175%] phone:w-[60%] smtablet:text-[150%] smtablet:mt-[15%] tablet:text-[175%] smtablet:text-[175%] w-[40%] tablet:mt-[9%] text-center mt-[6%] font-bold`;
 
   /* const bodyC = "font-nunito text-white bg-blackGood"; */
 
-  const storyHeader = `underline underline-offset-[20px] decoration-8 decoration-wavy decoration-lightorange`;
+  const storyHeader = `underline underline-offset-[20px] phone:text-[70%] decoration-8 decoration-wavy decoration-lightorange smtablet:text-[75%] tablet:text-[75%]`;
 
   const ourStory =
-    "w-[30%] tablet:w-[30%] align-center bg-black bg-opacity-50 laptop:mt-[30%] tablet:mt-[35%] laptop:text-[250%] tablet:text-[150%] tablet:w-[45%] p-[2%] absolute rounded-[30px] text-center text-white font-semibold";
+    "w-[30%] tablet:w-[30%] phone:hidden smtablet:mt-[40%] align-center bg-black bg-opacity-50 laptop:mt-[30%] tablet:mt-[35%] smtablet:mt-[35%] laptop:text-[250%] tablet:text-[150%] tablet:w-[45%] p-[2%] absolute rounded-[30px] text-center text-white font-semibold";
 
-  const arrow = `animate-bounce relative clear-both h-[50px] tablet:h-[30px] ml-[5%] inline`;
+  const arrow = `animate-bounce relative clear-both h-[50px] tablet:h-[30px] ml-[5%] inline smtablet:h-[20px]`;
 
   const list = `text-[80%] inline`;
 
@@ -69,7 +67,7 @@ export default function Home() {
   const uscfLink = `text-blueNice !important`;
   const textAbout = "text-textGray text-[60%] font-light";
   const [popDisplay, displayS] = useState(
-    `opacity-100 fixed laptop:text-[200%] tablet:ml-[30%] tablet:mr-[30%] text-white bg-blackGood fixed mt-[20%] block p-[20px] ml-[26%] mr-[26%] rounded-[10px] border-white border-[5px] z-50 text-center `
+    `opacity-100 fixed laptop:text-[200%] tablet:ml-[30%] tablet:mr-[30%] text-white bg-blackGood phone:ml-[20%] phone:mr-[20%] phone:mt-[50%] phone:w-[60%] fixed mt-[20%] block p-[20px] ml-[26%] mr-[26%] rounded-[10px] border-white border-[5px] z-50 text-center smtablet:mt-[25%]`
   );
 
   const popUp = `${popDisplay}`;
@@ -104,13 +102,15 @@ export default function Home() {
             onClick={() => {
               setZ(z + 1);
               setTwo(
-                `opacity-100 z-30 text-[450%] font-bold bg-blackGood h-screen text-white`
+                `opacity-100 z-30 text-[450%] font-bold bg-blackGood h-screen text-white phone:h-[1px] `
               );
               setO(
-                `opacity-100 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80%  to-yell flex flex-wrap tablet:h-[500px] laptop:h-screen`
+                `phone:h-[400px] opacity-100 z-20 object-contain justify-center bg-gradient-to-tr from-darkvi via-30% via-darkpurp via-lightorange via-80%  to-yell flex flex-wrap tablet:h-[600px] smtablet:h-[400px] laptop:h-screen`
               );
               displayS("hidden");
-              setBoard(`absolute w-[25%] tablet:w-[22%]ml-[80%] z-30 laptop:mt-[10%] tablet:mt-[27%] ml-[75%] opacity-100`);
+              setBoard(
+                `absolute w-[25%] phone:hidden tablet:w-[22%]ml-[80%] z-30 laptop:mt-[10%] smtablet:mt-[10%] tablet:mt-[27%] ml-[75%] opacity-100`
+              );
             }}
             className="text-rose-500"
           >
@@ -126,7 +126,7 @@ export default function Home() {
           />
 
           <div className={greeting}>
-            Welcome to the Marlboro Chess Club !
+            Welcome to the Marlboro Chess Club!
             <p className={miniText}>By Akshat Tewari and Rakesh Chandwani</p>
           </div>
           <div className={ourStory}>
@@ -150,12 +150,12 @@ export default function Home() {
               <img
                 src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/NOooooooYuo/phpgYYEcB.png"
                 alt="Image not loading"
-                className="ml-[1%] inline w-[5%] underline underline-offset-[20px] decoration-8 decoration-wavy decoration-lightorange"
+                className="ml-[1%] inline w-[5%] underline underline-offset-[20px] phone:h-[50px] phone:w-[50px] decoration-8 decoration-wavy decoration-lightorange"
               />
             </article>
-            <div className="text-[90%] rounded-md bg-gradient-to-r from-purple-500 to-lightorange p-1 w-[50%] overflow-auto mt-[10%] ml-[35%] h-fit">
+            <div className="text-[90%] phone:ml-[5%] phone:w-[90%] phone:mr-[5%] smtablet:text-[70%] smtablet:w-[55%] smtablet:ml-[40%] rounded-md bg-gradient-to-r from-purple-500 to-lightorange p-1 w-[50%] tablet:w-[60%] overflow-auto mt-[10%] ml-[45%] tablet:ml-[35%] h-fit tablet:mb-[5%]">
               <div className="flex bg-blackGood  overflow-auto text-left h-full">
-                <article className="text-[35%] font-nunito bg-gradient-to-r from-purple-500 to-lightorange inline-block bg-clip-text p-[5%] block w-[100%] overflow-auto">
+                <article className="text-[35%] font-nunito bg-gradient-to-r from-purple-500 to-lightorange bg-clip-text p-[5%] block w-[100%] overflow-auto">
                   <p className="align-center justify-center text-[110%] text-white mt-[3%]">
                     Marlboro Chess Club
                   </p>
